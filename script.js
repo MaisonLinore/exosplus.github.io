@@ -1,4 +1,4 @@
-// Smooth scroll buat tombol Get Exos+
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -8,11 +8,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Alert buat tombol Get Access Now
-document.querySelectorAll('.btn').forEach(btn => {
-  if(btn.textContent.includes('Get Access')) {
-    btn.addEventListener('click', () => {
-      alert('Exos+ launching soon! Join waitlist dulu ya 🔥');
-    });
-  }
+// Handle form submit
+document.getElementById('waitlist-form').addEventListener('submit', function(e){
+  setTimeout(() => {
+    alert('Makasih! Cek email lo buat update Exos+ 🚀');
+    this.reset();
+  }, 500);
 });
