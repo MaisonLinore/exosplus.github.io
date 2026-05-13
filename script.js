@@ -8,10 +8,35 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
-// Handle form submit
-document.getElementById('waitlist-form').addEventListener('submit', function(e){
-  setTimeout(() => {
-    alert('Makasih! Cek email lo buat update Exos+ 🚀');
-    this.reset();
-  }, 500);
+// Handle form submit tanpa redirect
+const form = document.getElementById('waitlist-form');
+const message = document.getElementById('form-message');
+
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+  
+  const formData = new FormData(form);
+  message.textContent = "Sending...";
+  
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+    
+    if (response.ok) {
+      message.textContent = "Thanks! Check your Email  🚀";
+      message.style.color = "#4ade80";
+      form.reset();
+    } else {
+      message.textContent = "Failed. Try again..";
+      message.style.color = "#f87171";
+    }
+  } catch (error) {
+    message.textContent = "An error. Try again...";
+    message.style.color = "#f87171";
+  }
 });
