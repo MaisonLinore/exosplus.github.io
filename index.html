@@ -3,49 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exos+ AI Orchestra - 5 AIs. One Answer. $3 Lifetime</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Exos+ | 5 AIs for $3 Lifetime</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    body {
+      background: #0a0a0a;
+      color: #fff;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 60px;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00d4ff, #0099ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    p {
+      font-size: 18px;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+    .highlight {
+      color: #00d4ff;
+      font-weight: 600;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input[type="email"] {
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      color: #fff;
+      font-size: 16px;
+    }
+    input[type="email"]:focus {
+      outline: none;
+      border-color: #00d4ff;
+    }
+    button {
+      padding: 16px;
+      border-radius: 8px;
+      border: none;
+      background: linear-gradient(90deg, #00d4ff, #0099ff);
+      color: #000;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    button:hover {
+      transform: scale(1.02);
+    }
+    .small {
+      font-size: 14px;
+      color: #666;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
-    <header>
-      <h1>Exos+ AI</h1>
-      <p class="subtitle">The AI Orchestra. 5 Models. One Answer.</p>
-      <a href="#pricing" class="btn">Get Exos+ $3 Lifetime</a>
-    </header>
-
-    <section class="hero">
-      <h2>Stop Paying $60/mo for AI</h2>
-      <p>Exos+ routes your prompt to GPT-5, Claude 4, Gemini 2.5, Grok 4, and Llama 4 at once. 
-         Get the best answer, fact-checked and combined.</p>
-      <div class="demo-box">
-        <p><strong>User:</strong> Write ad copy for Brazil market</p>
-        <p><strong>GPT-5:</strong> Creates English copy</p>
-        <p><strong>Claude 4:</strong> Translates to PT-BR</p>
-        <p><strong>Grok 4:</strong> Adds trending X hashtags</p>
-        <p><strong>Exos+ Final:</strong> Perfect ad ready to launch 🔥</p>
-      </div>
-    </section>
-
-    <section id="pricing" class="pricing">
-  <h2>Pricing</h2>
-  <div class="pricing-card">
-    <h3>Exos+ Pro</h3>
-    <p class="price">$3 <span>Lifetime</span></p>
+    <h1>Exos+</h1>
+    <p>Stop paying <span class="highlight">$60/mo</span> for ChatGPT, Claude, Gemini, Perplexity & Grok separately.</p>
+    <p>Get all 5 AIs in one app for <span class="highlight">$3 lifetime</span>. Join the waitlist now.</p>
     
-    <form id="waitlist-form" action="https://formspree.io/f/mvzlyqvj" method="POST">
-  <input type="email" name="email" placeholder="Masukkan email lo" required>
-  <button type="submit" class="btn">Join Waitlist</button>
-  <p id="form-message" class="small"></p>
-</form>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <input type="hidden" name="_subject" value="New Exos+ Waitlist Signup">
+      <input type="hidden" name="_next" value="https://maisonlinore.github.io/exosplus.github.io/thanks.html">
+      <button type="submit">Get Exos+ $3 Lifetime</button>
+    </form>
     
-    <p class="small">vs $720/year for ChatGPT + Claude + Gemini</p>
+    <p class="small">No spam. Unsubscribe anytime. 247 people already joined.</p>
   </div>
-</section>
-    <footer>
-      <p>Exos+ AI Orchestra © 2026</p>
-    </footer>
-  </div>
-  <script src="script.js"></script>
 </body>
 </html>
